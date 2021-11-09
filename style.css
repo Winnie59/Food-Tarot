@@ -1,9 +1,15 @@
+body {
+    /* background: url("bg.jpg") no-repeat center center fixed;
+    background-size: cover;  */
+    background: radial-gradient(#e9bcac,#d1c6f3);
+
+}
 h1 {
     text-align: center;
 }
 .card {
-    height: 110px;
-    width: 70px;
+    height: 120px;
+    width: 75px;
     position: relative;
 }
 .allcard {
@@ -23,10 +29,17 @@ h1 {
 }
 
 .back {
-    background-color: black;
+    background-color: #f7e6e4;
     border: 1px solid black;
 }
 .front {
-    background-color: rgb(121, 163, 240);
+    background-color: rgb(237, 249, 253);
     border: 1px solid black;
+}
+.allcard.hide .back {
+    display: none;
+}
+
+.card.hide .back {
+    display: none;
 }
