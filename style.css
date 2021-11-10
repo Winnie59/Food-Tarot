@@ -18,12 +18,13 @@ body {
 .bonustitle {
     text-align: center;
     font-family: "Mochiy Pop P One", sans-serif;
-    color: rgb(231, 122, 26);
+    color: rgb(66, 64, 63);
     font-size: 50px;
     font-weight:bolder;
-    text-shadow: 3px 3px 3px rgb(245, 242, 241);
+    text-shadow: 6px 6px 6px rgb(245, 242, 241);
     margin-bottom: 30px;
     margin-top: 20px;
+    font-style: italic;
 }
 .status {
     display: grid;
@@ -187,7 +188,7 @@ body {
         width: 110px;
     }
     .card1 {
-        height: 330px;
+        height: 350px;
         width: 250px;
     }
     .title {

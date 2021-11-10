@@ -9,10 +9,10 @@ function shuffleCards() {
         card.style.order = cardArray[randomCard]
     })
 }
-
-function click() {
-    let myBGSound = new Audio('Komiku_-_04_-_Shopping_List.mp3')
+let myBGSound = new Audio('Komiku_-_04_-_Shopping_List.mp3')
     myBGSound.play()
+    
+function click() { 
     for(let i = 0; i < cards.length; i++) {
         cards[i].addEventListener('click', () => {
             cards[i].classList.add('hide')
