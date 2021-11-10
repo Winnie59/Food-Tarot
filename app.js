@@ -23,7 +23,6 @@ function click() {
                     let myBlingSound = new Audio('Diamond-bling-sound-effect.mp3')
             myBlingSound.play()
                     score.innerHTML = parseInt(score.innerHTML) +1
-            console.dir(cardOne)
                     cardOne.classList.remove('hide')
                     cardOne.classList.add('match')
                     cardTwo.classList.remove('hide') 
@@ -47,5 +46,8 @@ function click() {
 
 shuffleCards()
 click()
+
+
+
 
 

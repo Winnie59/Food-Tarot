@@ -5,16 +5,25 @@ body {
 }
 .title {
     text-align: center;
-    font-family: "Cinzel", sans-serif;
-    color: rgb(17, 1, 17);
-    font-size: 40px;
+    font-family: "Mochiy Pop P One", sans-serif;
+    color: rgb(209, 77, 209);
+    font-size: 50px;
     font-weight:bolder;
-    text-shadow: 4px 4px 4px rgb(180, 127, 190);
+    text-shadow: 6px 6px 6px rgb(244, 238, 245);
     margin-bottom: 10px;
     margin-top: 0;
     grid-column: 1/ span3;
-    grid-row: 2;
-
+    grid-row: 1;
+}
+.bonustitle {
+    text-align: center;
+    font-family: "Mochiy Pop P One", sans-serif;
+    color: rgb(231, 122, 26);
+    font-size: 50px;
+    font-weight:bolder;
+    text-shadow: 3px 3px 3px rgb(245, 242, 241);
+    margin-bottom: 30px;
+    margin-top: 20px;
 }
 .status {
     display: grid;
@@ -80,9 +89,96 @@ body {
 .card.match .back {
     display: none;
 }
+#click {
+    font-size: 2em;
+}
+
+.card1 {
+    height: 320px;
+    width: 240px;
+    position: relative;
+}
+.allcard1 {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 10px;
+    justify-content: center;
+}
+.cardpic1 {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.back1 {
+    background-color:rgb(12, 11, 11);
+    border: 1px solid black;
+}
+.front1 {
+    background-color: rgb(237, 249, 253);
+    border: 1px solid black;
+    overflow: hidden;
+}
+.allcard1.hide .back1 {
+    display: none;
+}
+.card1.hide .back1 {
+    display: none;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: salmon;
+    text-shadow: 3px 3px 3px rgb(244, 238, 245);
+    font-family: "Mochiy Pop P One";
+}
+.overlay.visible {
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 500ms forwards;
+}
+@keyframes overlay-grow {
+    from {
+        background-color: rgba(0,0,0,0);
+        font-size: 0;
+    } to {
+        background-color: rgba(0,0,0,.9);
+        font-size: 3em;
+    }
+}
+
+.card1 :hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
 
 @media (min-width:800px) {
-    .allcard {
+    .allcard, .allcard1{
         grid-template-columns: repeat(5, auto);
         grid-gap: 18px;
     }
@@ -90,9 +186,18 @@ body {
         height: 160px;
         width: 110px;
     }
+    .card1 {
+        height: 330px;
+        width: 250px;
+    }
     .title {
         font-size: 80px;
         margin-top: 20px;
+    }
+    .bonustitle {
+        font-size: 80px ;
+        margin-top: 70px;
+        margin-bottom: 100px;
     }
     .timebar {
         font-size: 35px;
