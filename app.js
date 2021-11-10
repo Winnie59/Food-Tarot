@@ -5,8 +5,8 @@ const time = document.querySelector('#time')
 
 
 
-let timeCounting = 90
-let scoreCount = 0
+// let timeCounting = 90
+// let scoreCount = 0
 
 function start() {
     document.querySelector('#startpage').addEventListener('click', () => {
@@ -47,7 +47,7 @@ function click() {
                 if(cardOne.dataset.pair === cardTwo.dataset.pair) {
                     let myBlingSound = new Audio('Diamond-bling-sound-effect.mp3')
             myBlingSound.play()
-            let scoreCount = score.innerHTML
+            // let scoreCount = score.innerHTML
                     score.innerHTML = parseInt(score.innerHTML) +1
                     cardOne.classList.remove('hide')
                     cardOne.classList.add('match')
@@ -71,9 +71,22 @@ function click() {
     }
 }
 
+function reset() {
+    let scoreCount = score.innerHTML
+    let textCounting = time.innerText
+    score.innerHTML = 0
+    time.innerText = 90
+    scoreCount = score.innerHTML
+    textCounting = time.innerText
+    // cards.forEach(card => {
+    //     card.classList.remove('hide')
+    // })
+    
+}
 
 function gameOver() {
     clearInterval(timecountDown)
+    reset()
     let myFailSound = new Audio('fail-trombone-01.mp3')
             myFailSound.play()
     document.querySelector('#gameover').classList.add('visible')
@@ -81,6 +94,7 @@ function gameOver() {
 
 function winning() {
     clearInterval(timecountDown)
+    reset()
     let myWinSound = new Audio('Game-show-winner-sound-effect.mp3')
             myWinSound.play()
     document.querySelector('#win').classList.add('visible')
