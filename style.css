@@ -2,11 +2,46 @@ body {
     /* background: url("bg.jpg") no-repeat center center fixed;
     background-size: cover;  */
     background: radial-gradient(#e9bcac,#d1c6f3);
+}
+.title {
+    text-align: center;
+    font-family: "Cinzel", sans-serif;
+    color: rgb(17, 1, 17);
+    font-size: 40px;
+    font-weight:bolder;
+    text-shadow: 4px 4px 4px rgb(180, 127, 190);
+    margin-bottom: 10px;
+    margin-top: 0;
+    grid-column: 1/ span3;
+    grid-row: 2;
 
 }
-h1 {
-    text-align: center;
+.status {
+    display: grid;
+    grid-template-rows: 1fr;
+	grid-template-columns: 1fr 2fr;
 }
+.timebar {
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 30px;
+    margin-bottom: 0;
+    font-family: "Mochiy Pop P One",sans-serif;
+    font-size: 20px;
+    color: rgb(49, 48, 48);
+    text-shadow: 2px 2px 2px white;
+}
+.scorebar {
+    grid-column: 3;
+    grid-row: 2;
+    margin-right: 30px;
+    margin-bottom: 0;
+    font-family: "Mochiy Pop P One",sans-serif;
+    font-size: 20px;
+    color: rgb(49, 48, 48);
+    text-shadow: 2px 2px 2px white;
+}
+
 .card {
     height: 120px;
     width: 75px;
@@ -16,7 +51,6 @@ h1 {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 10px;
-    margin: 50;
     justify-content: center;
 }
 .cardpic {
@@ -42,4 +76,31 @@ h1 {
 
 .card.hide .back {
     display: none;
+}
+.card.match .back {
+    display: none;
+}
+
+@media (min-width:800px) {
+    .allcard {
+        grid-template-columns: repeat(5, auto);
+        grid-gap: 18px;
+    }
+    .card {
+        height: 160px;
+        width: 110px;
+    }
+    .title {
+        font-size: 80px;
+        margin-top: 20px;
+    }
+    .timebar {
+        font-size: 35px;
+        margin-left: 70px;
+    }
+    .scorebar {
+        font-size: 35px;
+        margin-right: 70px;
+    }
+    
 }
