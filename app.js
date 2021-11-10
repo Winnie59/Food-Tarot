@@ -13,21 +13,21 @@ function start() {
         overlay.classList.remove('visible')
         let myBGSound = new Audio('Komiku_-_04_-_Shopping_List.mp3')
         myBGSound.play()
-        countDown()
         shuffleCards()
         click()
+        countDown()
     })
 }
 
+let timecountDown = setInterval(countDown,1000)
 function countDown() {
-    return setInterval(() => {
         let timeCounting = time.innerText
         timeCounting--
         time.innerText = timeCounting
         if(timeCounting === 0)
         gameOver()
-    }, 1000);
-}
+    }
+
 
 function shuffleCards() {
      cards.forEach(card => {
@@ -73,14 +73,14 @@ function click() {
 
 
 function gameOver() {
-    clearInterval(timeCounting)
+    clearInterval(timecountDown)
     let myFailSound = new Audio('fail-trombone-01.mp3')
             myFailSound.play()
     document.querySelector('#gameover').classList.add('visible')
 }
 
 function winning() {
-    clearInterval(timeCounting)
+    clearInterval(timecountDown)
     let myWinSound = new Audio('Game-show-winner-sound-effect.mp3')
             myWinSound.play()
     document.querySelector('#win').classList.add('visible')

@@ -1,7 +1,7 @@
 body {
-    /* background: url("bg.jpg") no-repeat center center fixed;
-    background-size: cover;  */
-    background: radial-gradient(#e9bcac,#d1c6f3);
+    background: url("bg.jpg") no-repeat center center fixed;
+    background-size: cover; 
+    /* background: radial-gradient(#e9bcac,#d1c6f3); */
 }
 .title {
     text-align: center;
