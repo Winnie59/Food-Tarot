@@ -11,12 +11,17 @@ function shuffleCards() {
 }
 
 function click() {
+    let myBGSound = new Audio('Komiku_-_04_-_Shopping_List.mp3')
+    myBGSound.play()
     for(let i = 0; i < cards.length; i++) {
         cards[i].addEventListener('click', () => {
             cards[i].classList.add('hide')
-
+            let myFlipSound = new Audio('Card-flip-sound-effect.mp3')
+            myFlipSound.play()
             function match(cardOne, cardTwo) {
                 if(cardOne.dataset.pair === cardTwo.dataset.pair) {
+                    let myBlingSound = new Audio('Diamond-bling-sound-effect.mp3')
+            myBlingSound.play()
                     score.innerHTML = parseInt(score.innerHTML) +1
             console.dir(cardOne)
                     cardOne.classList.remove('hide')
