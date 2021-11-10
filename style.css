@@ -6,7 +6,7 @@ body {
 .title {
     text-align: center;
     font-family: "Mochiy Pop P One", sans-serif;
-    color: rgb(209, 77, 209);
+    color: rgb(65, 62, 65);
     font-size: 50px;
     font-weight:bolder;
     text-shadow: 6px 6px 6px rgb(244, 238, 245);
@@ -19,7 +19,7 @@ body {
     text-align: center;
     font-family: "Mochiy Pop P One", sans-serif;
     color: rgb(66, 64, 63);
-    font-size: 50px;
+    font-size: 40px;
     font-weight:bolder;
     text-shadow: 6px 6px 6px rgb(245, 242, 241);
     margin-bottom: 30px;

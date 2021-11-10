@@ -1,6 +1,33 @@
 const cards = document.querySelectorAll('.card')
 const score = document.querySelector('#score')
+const overlay = document.querySelector('.overlay')
+const time = document.querySelector('#time')
 
+
+
+let timeCounting = 90
+let scoreCount = 0
+
+function start() {
+    document.querySelector('#startpage').addEventListener('click', () => {
+        overlay.classList.remove('visible')
+        let myBGSound = new Audio('Komiku_-_04_-_Shopping_List.mp3')
+        myBGSound.play()
+        countDown()
+        shuffleCards()
+        click()
+    })
+}
+
+function countDown() {
+    return setInterval(() => {
+        let timeCounting = time.innerText
+        timeCounting--
+        time.innerText = timeCounting
+        if(timeCounting === 0)
+        gameOver()
+    }, 1000);
+}
 
 function shuffleCards() {
      cards.forEach(card => {
@@ -9,9 +36,7 @@ function shuffleCards() {
         card.style.order = cardArray[randomCard]
     })
 }
-let myBGSound = new Audio('Komiku_-_04_-_Shopping_List.mp3')
-    myBGSound.play()
-    
+
 function click() { 
     for(let i = 0; i < cards.length; i++) {
         cards[i].addEventListener('click', () => {
@@ -22,6 +47,7 @@ function click() {
                 if(cardOne.dataset.pair === cardTwo.dataset.pair) {
                     let myBlingSound = new Audio('Diamond-bling-sound-effect.mp3')
             myBlingSound.play()
+            let scoreCount = score.innerHTML
                     score.innerHTML = parseInt(score.innerHTML) +1
                     cardOne.classList.remove('hide')
                     cardOne.classList.add('match')
@@ -32,21 +58,35 @@ function click() {
                         cardOne.classList.remove('hide')
                         cardTwo.classList.remove('hide')
                     }, 1000)
+                } if (score.innerHTML == 10) {
+                    winning()
                 }
             }
 
             const filpCards = document.querySelectorAll('.hide')
             if(filpCards.length == 2) {
                 match(filpCards[0],filpCards[1])
-            }
+            } 
         })
     }
 }
 
 
-shuffleCards()
-click()
+function gameOver() {
+    clearInterval(timeCounting)
+    let myFailSound = new Audio('fail-trombone-01.mp3')
+            myFailSound.play()
+    document.querySelector('#gameover').classList.add('visible')
+}
 
+function winning() {
+    clearInterval(timeCounting)
+    let myWinSound = new Audio('Game-show-winner-sound-effect.mp3')
+            myWinSound.play()
+    document.querySelector('#win').classList.add('visible')
+}
+
+start()
 
 
 
