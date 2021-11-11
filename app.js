@@ -13,26 +13,15 @@ function start() {
         shuffleCards()
         click()
 let timecountDown = setInterval(countDown,1000)
-    })
-}
-
 function countDown() {
         let timeCounting = time.innerText
         timeCounting--
         time.innerText = timeCounting
         if(timeCounting === 0)
         gameOver()
+        restart()
     }
-
-
-function shuffleCards() {
-     cards.forEach(card => {
-        let cardArray = [...Array(cards.length).keys()] 
-        let randomCard = Math.floor(Math.random()*cards.length)
-        card.style.order = cardArray[randomCard]
-    }) 
-} 
-
+    
 function click() { 
     for(let i = 0; i < cards.length; i++) {
         cards[i].addEventListener('click', () => {
@@ -67,6 +56,35 @@ function click() {
     }
 }
 
+    function gameOver() {
+        clearInterval(timecountDown)
+        reset()
+        let myFailSound = new Audio('fail-trombone-01.mp3')
+                myFailSound.play()
+        document.querySelector('#gameover').classList.add('visible')
+    }
+    
+    function winning() {
+        clearInterval(timecountDown)
+        reset()
+        let myWinSound = new Audio('Game-show-winner-sound-effect.mp3')
+                myWinSound.play()
+        document.querySelector('#win').classList.add('visible')
+    }
+    })
+}
+
+
+
+function shuffleCards() {
+     cards.forEach(card => {
+        let cardArray = [...Array(cards.length).keys()] 
+        let randomCard = Math.floor(Math.random()*cards.length)
+        card.style.order = cardArray[randomCard]
+    }) 
+} 
+
+
 function reset() {
     let scoreCount = score.innerHTML
     let textCounting = time.innerText
@@ -78,30 +96,15 @@ function reset() {
 }
 
 function restart() {
-    document.querySelector('#gameover').addEventListener('click', () => {
-        overlay.classList.add('visible')
-    document.querySelector('.allcard').classList.remove('hide')
-    cards.classList.remove('hide')
-})
+    document.querySelector('#over').addEventListener('click',() => {
+        document.querySelector('#gameover').classList.remove('visible')
+    })
 }
 
-function gameOver() {
-    clearInterval(timecountDown)
-    reset()
-    let myFailSound = new Audio('fail-trombone-01.mp3')
-            myFailSound.play()
-    document.querySelector('#gameover').classList.add('visible')
-}
 
-function winning() {
-    clearInterval(timecountDown)
-    reset()
-    let myWinSound = new Audio('Game-show-winner-sound-effect.mp3')
-            myWinSound.play()
-    document.querySelector('#win').classList.add('visible')
-}
 
 start()
+
 
 
 

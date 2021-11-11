@@ -1,7 +1,6 @@
 body {
     background: url("bg.jpg") no-repeat center center fixed;
     background-size: cover; 
-    /* background: radial-gradient(#e9bcac,#d1c6f3); */
 }
 .title {
     text-align: center;
@@ -92,7 +91,32 @@ body {
 }
 #click {
     font-size: 2em;
+    background-color: salmon;
+    border-radius: 10px;
 }
+#restart {
+   width: 120px;
+   height: 50px;
+   font-size: 30px;
+   border-radius: 10px;
+   margin-left: 70%;
+   margin-bottom: 50px;
+   margin-top: 30px;
+   background-color: salmon;
+   text-shadow: 2px 2px 2px white;
+   border: 3px solid black;
+}
+
+#over {
+    margin: 50% auto;
+    width: 120px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: salmon;
+    text-shadow: 2px 2px 2px white;
+    border: 3px solid black;
+ }
 
 .card1 {
     height: 320px;
@@ -155,7 +179,7 @@ body {
         font-size: 0;
     } to {
         background-color: rgba(0,0,0,.9);
-        font-size: 3em;
+        font-size: 2.8em;
     }
 }
 
