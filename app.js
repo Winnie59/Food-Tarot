@@ -3,7 +3,7 @@ const score = document.querySelector('#score')
 const overlay = document.querySelector('.overlay')
 const time = document.querySelector('#time')
 
-
+start()
 
 function start() {
     document.querySelector('#startpage').addEventListener('click', () => {
@@ -32,7 +32,6 @@ function click() {
                 if(cardOne.dataset.pair === cardTwo.dataset.pair) {
                     let myBlingSound = new Audio('Diamond-bling-sound-effect.mp3')
             myBlingSound.play()
-            // let scoreCount = score.innerHTML
                     score.innerHTML = parseInt(score.innerHTML) +1
                     cardOne.classList.remove('hide')
                     cardOne.classList.add('match')
@@ -74,8 +73,6 @@ function click() {
     })
 }
 
-
-
 function shuffleCards() {
      cards.forEach(card => {
         let cardArray = [...Array(cards.length).keys()] 
@@ -83,7 +80,6 @@ function shuffleCards() {
         card.style.order = cardArray[randomCard]
     }) 
 } 
-
 
 function reset() {
     let scoreCount = score.innerHTML
@@ -103,7 +99,7 @@ function restart() {
 
 
 
-start()
+
 
 
 
