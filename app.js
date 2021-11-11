@@ -5,9 +5,6 @@ const time = document.querySelector('#time')
 
 
 
-// let timeCounting = 90
-// let scoreCount = 0
-
 function start() {
     document.querySelector('#startpage').addEventListener('click', () => {
         overlay.classList.remove('visible')
@@ -15,11 +12,10 @@ function start() {
         myBGSound.play()
         shuffleCards()
         click()
-        countDown()
+let timecountDown = setInterval(countDown,1000)
     })
 }
 
-let timecountDown = setInterval(countDown,1000)
 function countDown() {
         let timeCounting = time.innerText
         timeCounting--
@@ -31,11 +27,11 @@ function countDown() {
 
 function shuffleCards() {
      cards.forEach(card => {
-        let cardArray = [...Array(cards.length).keys()]
+        let cardArray = [...Array(cards.length).keys()] 
         let randomCard = Math.floor(Math.random()*cards.length)
         card.style.order = cardArray[randomCard]
-    })
-}
+    }) 
+} 
 
 function click() { 
     for(let i = 0; i < cards.length; i++) {
@@ -63,7 +59,7 @@ function click() {
                 }
             }
 
-            const filpCards = document.querySelectorAll('.hide')
+            let filpCards = document.querySelectorAll('.hide')
             if(filpCards.length == 2) {
                 match(filpCards[0],filpCards[1])
             } 
@@ -78,10 +74,15 @@ function reset() {
     time.innerText = 90
     scoreCount = score.innerHTML
     textCounting = time.innerText
-    // cards.forEach(card => {
-    //     card.classList.remove('hide')
-    // })
-    
+    document.querySelector('.allcard').classList.add('hide')
+}
+
+function restart() {
+    document.querySelector('#gameover').addEventListener('click', () => {
+        overlay.classList.add('visible')
+    document.querySelector('.allcard').classList.remove('hide')
+    cards.classList.remove('hide')
+})
 }
 
 function gameOver() {
