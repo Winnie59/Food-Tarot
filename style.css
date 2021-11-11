@@ -59,7 +59,7 @@ body {
 .allcard {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-gap: 10px;
+    grid-gap: 18px;
     justify-content: center;
 }
 .cardpic {
@@ -98,7 +98,7 @@ body {
     font-family: "Mochiy Pop P One", sans-serif;
 }
 #restart {
-   width: 180px;
+   width: 220px;
    height: 80px;
    font-size: 30px;
    border-radius: 10px;
