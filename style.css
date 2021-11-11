@@ -95,23 +95,24 @@ body {
     border-radius: 10px;
 }
 #restart {
-   width: 120px;
-   height: 50px;
+   width: 180px;
+   height: 80px;
    font-size: 30px;
    border-radius: 10px;
-   margin-left: 70%;
+   margin-left: 60%;
    margin-bottom: 50px;
    margin-top: 30px;
    background-color: salmon;
    text-shadow: 2px 2px 2px white;
    border: 3px solid black;
+   font-family: "Mochiy Pop P One", sans-serif;
 }
 
 #over {
     margin: 50% auto;
-    width: 120px;
-    height: 50px;
-    font-size: 30px;
+    width: 150px;
+    height: 80px;
+    font-size: 50px;
     border-radius: 10px;
     background-color: salmon;
     text-shadow: 2px 2px 2px white;
@@ -232,5 +233,7 @@ body {
         font-size: 35px;
         margin-right: 70px;
     }
-    
+    #restart {
+        margin-left: 70%;
+    }
 }
