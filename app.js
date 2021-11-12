@@ -33,6 +33,7 @@ function start() {
           cards[i].classList.add("hide");
           let myFlipSound = new Audio("Card-flip-sound-effect.mp3");
           myFlipSound.play();
+          
           function match(cardOne, cardTwo) {
             if (cardOne.dataset.pair === cardTwo.dataset.pair) {
               let myBlingSound = new Audio("Diamond-bling-sound-effect.mp3");
@@ -46,7 +47,7 @@ function start() {
               setTimeout(() => {
                 cardOne.classList.remove("hide");
                 cardTwo.classList.remove("hide");
-              }, 1000);
+              }, 800);
             }
             if (score.innerHTML == 10) {
               winning();
