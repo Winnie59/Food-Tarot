@@ -1,5 +1,5 @@
 body {
-  background: url("bg.jpg") no-repeat center center fixed;
+  background: url("1.JPG") no-repeat center center fixed;
   background-size: cover;
 }
 .title {
@@ -29,6 +29,7 @@ body {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 2fr;
+  margin-bottom: 7px;
 }
 .timebar {
   grid-column: 1;
@@ -102,7 +103,7 @@ body {
   height: 80px;
   font-size: 30px;
   border-radius: 10px;
-  margin-left: 60%;
+  margin-left: 18%;
   margin-bottom: 50px;
   margin-top: 30px;
   background-color: salmon;
@@ -156,6 +157,11 @@ body {
 }
 .card1.hide .back1 {
   display: none;
+}
+
+h5 {
+    font-size: .7em;
+    margin-top: 0;
 }
 
 .overlay {
@@ -261,6 +267,13 @@ body {
     margin-right: 70px;
   }
   #restart {
-    margin-left: 70%;
+    margin-left: 15%;
   }
+  h5 {
+      font-size: 1em;
+  }
+  h3 {
+      font-size: 2em;
+  }
+
 }
