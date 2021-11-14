@@ -1,11 +1,17 @@
-let searchForm = document.querySelector("#searchForm");
+function startPage() {
+    let myExtraSound = new Audio("extratrack.mp3");
+    myExtraSound.play();  
+}
+ startPage()
 
-console.log(searchForm);
+let searchForm = document.querySelector("#searchForm");
 
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
   let input = document.querySelector("#searchBar").value
-  console.log(input);
+  let myBlingSound = new Audio("Diamond-bling-sound-effect.mp3");
+  myBlingSound.play();
+  myBlingSound.volume = 0.4
 
   fetch(
     `https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=${input}&day=today`,
@@ -30,12 +36,6 @@ searchForm.addEventListener("submit", (e) => {
         li4.innerText = `"${data.description}"`
         document.querySelector('ul').append(li1,li2,li3,li4)
         li4.classList.add('more')
-      console.log(data);
     }))
 
-
-
-    .catch((err) => {
-      console.error(err);
-    });
 });
