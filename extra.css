@@ -1,0 +1,69 @@
+body {
+    background: url('extra2.JPG')no-repeat center center fixed;
+    background-size: cover;
+}
+form {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 5em;
+}
+#searchBar{
+    width: 300px;
+    font-size: 20px;
+    font-family: monospace;
+    background-color: gray;
+    color: honeydew;
+    text-shadow: 1px 1px 1px rgb(8, 8, 8);
+    border-radius: 15px;
+}
+
+#seachButton {
+  width: 70px;
+  height: 30px;
+  border-radius: 50px;
+  font-size: 15px;
+}
+
+h1 {
+    font-family: "Mochiy Pop P One", sans-serif;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(66, 64, 63);
+}
+
+ul {
+  list-style: none;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background: rgb(245, 242, 239);
+}
+
+li {
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: "Mochiy Pop P One", sans-serif;
+  text-align: justify;
+}
+
+.more {
+  font-size: 25px;
+  margin-top: 30px;
+  text-align: inherit;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 800px) {
+    h1 {
+        font-size: 60px;
+        margin-left: 50%;
+    }
+    #searchBar {
+        margin-left: 55%;
+    }
+    ul {
+        margin-left: 40%;
+    }
+    
+}
