@@ -1,5 +1,5 @@
 body {
-  background: url("1.JPG") no-repeat center center fixed;
+  background: url("2.JPG") no-repeat center center fixed;
   background-size: cover;
 }
 .title {
@@ -127,7 +127,7 @@ body {
 
 #over {
   margin: 50% auto;
-  width: 150px;
+  width: 200px;
   height: 80px;
   font-size: 50px;
   border-radius: 10px;
