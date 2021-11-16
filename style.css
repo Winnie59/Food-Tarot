@@ -112,17 +112,17 @@ body {
   font-family: "Mochiy Pop P One", sans-serif;
 }
 #daily {
-    width: 300px;
-    height: 60px;
-    font-size: 25px;
-    border-radius: 10px;
-    margin-left: 5%;
-    margin-bottom: 50px;
-    margin-top: 5px;
-    background-color: #facb9f;
-    text-shadow: 2px 2px 2px white;
-    border: 3px solid black;
-    font-family: "Mochiy Pop P One", sans-serif;
+  width: 300px;
+  height: 60px;
+  font-size: 25px;
+  border-radius: 10px;
+  margin-left: 5%;
+  margin-bottom: 50px;
+  margin-top: 5px;
+  background-color: #facb9f;
+  text-shadow: 2px 2px 2px white;
+  border: 3px solid black;
+  font-family: "Mochiy Pop P One", sans-serif;
 }
 
 #over {
@@ -173,8 +173,8 @@ body {
 }
 
 h5 {
-    font-size: .7em;
-    margin-top: 0;
+  font-size: 0.7em;
+  margin-top: 0;
 }
 
 .overlay {
@@ -283,10 +283,9 @@ h5 {
     margin-left: 15%;
   }
   h5 {
-      font-size: 1em;
+    font-size: 1em;
   }
   h3 {
-      font-size: 2em;
+    font-size: 2em;
   }
-
 }
