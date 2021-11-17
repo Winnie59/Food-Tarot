@@ -1,5 +1,5 @@
 function startPage() {
-  let myExtraSound = new Audio("extratrack.mp3");
+  let myExtraSound = new Audio("sound/extratrack.mp3");
   myExtraSound.play();
 }
 startPage();
@@ -9,7 +9,7 @@ let searchForm = document.querySelector("#searchForm");
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
   let input = document.querySelector("#searchBar").value;
-  let myBlingSound = new Audio("Diamond-bling-sound-effect.mp3");
+  let myBlingSound = new Audio("sound/blink.mp3");
   myBlingSound.play();
   myBlingSound.volume = 0.4;
 

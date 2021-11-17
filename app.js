@@ -14,7 +14,7 @@ function shuffleCards() {
 function start() {
   document.querySelector("#startpage").addEventListener("click", () => {
     overlay.classList.remove("visible");
-    let myBGSound = new Audio("Komiku_-_04_-_Shopping_List.mp3");
+    let myBGSound = new Audio("sound/bg1.mp3");
     myBGSound.play();
     shuffleCards();
     click();
@@ -31,12 +31,12 @@ function start() {
       for (let i = 0; i < cards.length; i++) {
         cards[i].addEventListener("click", () => {
           cards[i].classList.add("hide");
-          let myFlipSound = new Audio("Card-flip-sound-effect.mp3");
+          let myFlipSound = new Audio("sound/flip.mp3");
           myFlipSound.play();
 
           function match(cardOne, cardTwo) {
             if (cardOne.dataset.pair === cardTwo.dataset.pair) {
-              let myBlingSound = new Audio("Diamond-bling-sound-effect.mp3");
+              let myBlingSound = new Audio("sound/blink.mp3");
               myBlingSound.play();
               score.innerHTML = parseInt(score.innerHTML) + 1;
               cardOne.classList.remove("hide");
@@ -64,16 +64,14 @@ function start() {
 
     function gameOver() {
       clearInterval(timecountDown);
-      // reset()
-      let myFailSound = new Audio("fail-trombone-01.mp3");
+      let myFailSound = new Audio("sound/fail.mp3");
       myFailSound.play();
       document.querySelector("#gameover").classList.add("visible");
     }
 
     function winning() {
       clearInterval(timecountDown);
-      // reset()
-      let myWinSound = new Audio("Game-show-winner-sound-effect.mp3");
+      let myWinSound = new Audio("sound/win.mp3");
       myWinSound.play();
       document.querySelector("#win").classList.add("visible");
     }
@@ -86,14 +84,5 @@ function restart() {
   });
 }
 
-// function reset() {
-//     let scoreCount = score.innerHTML
-//     let textCounting = time.innerText
-//     score.innerHTML = 0
-//     time.innerText = 90
-//     scoreCount = score.innerHTML
-//     textCounting = time.innerText
-//     document.querySelector('.allcard').classList.add('hide')
-// }
 
 start();
