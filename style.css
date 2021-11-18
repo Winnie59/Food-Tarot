@@ -125,14 +125,15 @@ body {
   font-family: "Mochiy Pop P One", sans-serif;
 }
 
-#mute, #unmute {
-    width: 50px;
-    display: block;
+#mute,
+#unmute {
+  width: 50px;
+  display: block;
 }
 
 .sound {
-    position: fixed;
-    margin-top: 30px;
+  position: fixed;
+  margin-top: 30px;
 }
 
 #over {

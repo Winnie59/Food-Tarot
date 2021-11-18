@@ -83,18 +83,10 @@ function start() {
 
     function mute() {
       myBGSound.pause();
-      //   myFlipSound.pause();
-      //   myBlinkSound.pause();
-      //   myFailSound.pause();
-      //   myWinSound.pause();
     }
 
     function unMute() {
       myBGSound.play();
-      //   myFlipSound.play();
-      //   myBlinkSound.play();
-      //   myFailSound.play();
-      //   myWinSound.play();
     }
 
     document.querySelector("#mute").addEventListener("click", mute);

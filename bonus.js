@@ -21,7 +21,6 @@ function click() {
       let myDrumSound = new Audio("sound/drum.mp3");
       myDrumSound.play();
       myDrumSound.volume = 1.2;
-      
     });
   }
 }
