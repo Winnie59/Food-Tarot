@@ -16,6 +16,7 @@ function start() {
     overlay.classList.remove("visible");
     let myBGSound = new Audio("sound/bg1.mp3");
     myBGSound.play();
+    myBGSound.volume = 0.4;
     shuffleCards();
     click();
     let timecountDown = setInterval(countDown, 1000);
@@ -33,11 +34,13 @@ function start() {
           cards[i].classList.add("hide");
           let myFlipSound = new Audio("sound/flip.mp3");
           myFlipSound.play();
+          myFlipSound.volume = 0.5;
 
           function match(cardOne, cardTwo) {
             if (cardOne.dataset.pair === cardTwo.dataset.pair) {
               let myBlingSound = new Audio("sound/blink.mp3");
               myBlingSound.play();
+              myBlingSound.volume = 0.5;
               score.innerHTML = parseInt(score.innerHTML) + 1;
               cardOne.classList.remove("hide");
               cardOne.classList.add("match");
@@ -66,6 +69,7 @@ function start() {
       clearInterval(timecountDown);
       let myFailSound = new Audio("sound/fail.mp3");
       myFailSound.play();
+      myFailSound.volume = 0.6;
       document.querySelector("#gameover").classList.add("visible");
     }
 
@@ -73,8 +77,28 @@ function start() {
       clearInterval(timecountDown);
       let myWinSound = new Audio("sound/win.mp3");
       myWinSound.play();
+      myWinSound.volume = 0.6;
       document.querySelector("#win").classList.add("visible");
     }
+
+    function mute() {
+      myBGSound.pause();
+      //   myFlipSound.pause();
+      //   myBlinkSound.pause();
+      //   myFailSound.pause();
+      //   myWinSound.pause();
+    }
+
+    function unMute() {
+      myBGSound.play();
+      //   myFlipSound.play();
+      //   myBlinkSound.play();
+      //   myFailSound.play();
+      //   myWinSound.play();
+    }
+
+    document.querySelector("#mute").addEventListener("click", mute);
+    document.querySelector("#unmute").addEventListener("click", unMute);
   });
 }
 
@@ -83,6 +107,5 @@ function restart() {
     document.querySelector("#gameover").classList.remove("visible");
   });
 }
-
 
 start();

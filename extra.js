@@ -1,6 +1,7 @@
 function startPage() {
   let myExtraSound = new Audio("sound/extratrack.mp3");
   myExtraSound.play();
+  myExtraSound.volume = 0.2;
 }
 startPage();
 
