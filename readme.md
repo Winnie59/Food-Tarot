@@ -31,7 +31,7 @@ My flash card game is about Food Tarots. There are 10 pairs of food cards. Playe
 ## Installation instructions
 1. Get a free API Key.
 2. Clone the repo.
-git clone https://github.com/your_username_/Food-Tarot
+`git clone https://github.com/your_username_/Food-Tarot`
 3. Enter your API in config.js
 ````javascript
     const myApiKey = 'ENTER YOUR API KEY';
