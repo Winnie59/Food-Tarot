@@ -18,7 +18,7 @@ My flash card game is about Food Tarots. There are 10 pairs of food cards. Playe
 ![Page Match](images/start4.jpeg)
 
 
-- If the remaining time ran out, will have to retry again.
+- If the remaining time ran out, will have to try again.
 
 ![Page Match](images/start5.jpeg)
 
@@ -32,7 +32,7 @@ My flash card game is about Food Tarots. There are 10 pairs of food cards. Playe
 1. Get a free API Key.
 2. Clone the repo.
 git clone https://github.com/your_username_/Food-Tarot
-3. Enter your API in confid.js
+3. Enter your API in config.js
 ````javascript
     const myApiKey = 'ENTER YOUR API KEY';
 ````
@@ -45,7 +45,7 @@ User can be anyone who enjoy matching game.
 - As a user, User should hear the sound alerts if the card are matched and they will stay filpped.
 - As a user, User should see the score updates every time that the pair is matched.
 - As a user, User win the game when matched 10 pairs of cards.
-- As a user, If the time running out, will have to retry again.
+- As a user, If the time running out, will have to try again.
 
 After winning
 
