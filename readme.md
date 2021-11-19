@@ -1,5 +1,19 @@
 ## Description
-My flash card game is about Food tarots. There are 10 pairs of food cards. Player has to match all 10 pairs to win the game. Bonus after wining, player can pick cards for some fun fun food fortune. and can also check daily horoscope.
+My flash card game is about Food Tarots. There are 10 pairs of food cards. Player has to match all 10 pairs to win the game. Bonus after wining, player can pick cards for some fun food fortune. and can also check daily horoscope.
+
+- Click the page to start game.
+![start page](images/start0.jpeg)
+
+- Play by matching 10 pairs of cards within 90 sec.
+![Page Match](images/start1.jpeg)
+![Page Match](images/start2.jpeg)
+
+- After matching all cards, will have bonus page to choose the fun food fortune card and page to review daily horoscope.
+![Page Match](images/start3.jpeg)
+![Page Match](images/start4.jpeg)
+
+- If the remaining time ran out, will have to retry again.
+![Page Match](images/start5.jpeg)
 
 ## Built With
 - [HTML](#html)
