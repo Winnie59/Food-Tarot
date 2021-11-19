@@ -29,8 +29,8 @@ My flash card game is about Food Tarots. There are 10 pairs of food cards. Playe
 - [JavaScript](#javascript)
 
 ## Installation instructions
-1. Get a free API Key
-2. Clone the repo
+1. Get a free API Key.
+2. Clone the repo.
 git clone https://github.com/your_username_/Food-Tarot
 3. Enter your API in confid.js
 ````javascript
@@ -38,7 +38,7 @@ git clone https://github.com/your_username_/Food-Tarot
 ````
 
 ## User Story
-User can be anyone who enjoy matching game 
+User can be anyone who enjoy matching game.
 
 - As a user, User should be able to start the game of matching 10 pairs of card.
 - As a user, User should be able to click to flip the card and find the match.
