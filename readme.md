@@ -55,4 +55,8 @@ After winning
 ## Wire Frames
 ![Wire frames](images/wireframes.jpeg)
 
+## Unsolved Problems and Major Hurdles
+- I was spending most of time on shuffling the card so I have to do a lot of research and learn from there.
+- My mute button is only work on the background music. Which I also want to leave the sound effect for the alert. But technically I couldn't make it all to mute at the same time so I have to do it that way.
+
 
