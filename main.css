@@ -68,6 +68,10 @@ body {
   width: 100%;
 }
 
+.cardpic1 >img {
+  width: 100%;
+}
+
 .cardpic {
   position: absolute;
   width: 100%;
