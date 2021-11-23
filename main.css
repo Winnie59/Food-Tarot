@@ -63,6 +63,10 @@ body {
   grid-gap: 18px;
   justify-content: center;
 }
+
+.card >img {
+  width: 100%;
+}
 .cardpic {
   position: absolute;
   width: 100%;
