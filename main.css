@@ -64,9 +64,10 @@ body {
   justify-content: center;
 }
 
-.card >img {
+.cardpic >img {
   width: 100%;
 }
+
 .cardpic {
   position: absolute;
   width: 100%;
@@ -74,6 +75,7 @@ body {
   display: flex;
   justify-content: center;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .back {
